@@ -1,0 +1,2 @@
+questions = ["What is 7 x 8?", "Capital of Florida?", "How many sides does a hexagon have?",
+             "What gas do plants take in?"]

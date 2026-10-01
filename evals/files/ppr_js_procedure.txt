@@ -1,0 +1,9 @@
+function filterByCity(city) {
+  var matches = [];
+  for (var i = 0; i < cities.length; i++) { // check each row
+    if (cities[i] == city) {
+      appendItem(matches, temps[i]);
+    }
+  }
+  return matches;
+}

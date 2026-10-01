@@ -1,0 +1,9 @@
+def grade_quiz(player_answers, answer_key):
+    correct = 0
+    # loop through every answer
+    for i in range(len(answer_key)):
+        if player_answers[i].strip().lower() == answer_key[i]:
+            correct = correct + 1
+        else:
+            print("Missed question " + str(i + 1))
+    return correct

@@ -1,0 +1,1 @@
+var cities = getColumn("Daily Weather", "City");

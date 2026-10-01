@@ -1,0 +1,3 @@
+    if (temps[i] > 90) {
+      hotDays = hotDays + 1;
+    }
