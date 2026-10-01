@@ -1,0 +1,66 @@
+{
+  "skill_name": "ap-csp-create-task-checker",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ok im about to submit my create task for ap csp tmrw. can u check if my code and my ppr are good?? code is quiz_game.py and the ppr segments are the 4 txt files",
+      "expected_output": "Program meets all six scoring requirements; PPR comment flagged first as a score-0 risk; no code rewritten.",
+      "files": [
+        "evals/files/quiz_game.py",
+        "evals/files/ppr_py_procedure.txt",
+        "evals/files/ppr_py_call.txt",
+        "evals/files/ppr_py_list_store.txt",
+        "evals/files/ppr_py_list_use.txt"
+      ],
+      "expectations": [
+        "Reports the comment in the PPR procedure segment as the top, highest-stakes issue",
+        "States that all six program-requirement items are met (procedure, call, list, list use, selection, iteration)",
+        "Identifies grade_quiz as a valid PPR procedure and names its first selection statement",
+        "Does not write or rewrite the student's code",
+        "Cites the rules documents and tells the student to confirm uncertain items with their teacher"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "my teacher said to double check our app lab project before friday bc a lot of people lost the program requirements point last year. heres our code (weather_app.js). we're gonna use filterByCity for the ppr",
+      "expected_output": "Flags the call to filterByCity passing 2 arguments to a 1-parameter procedure as a 'do not award' rule; notes favorites is a one-element list that doesn't count but cities/temps do; notes onEvent handlers aren't student-developed.",
+      "files": [
+        "evals/files/weather_app.js"
+      ],
+      "expectations": [
+        "Flags the call/header mismatch (2 arguments vs 1 parameter) at line 17 as a reason the point would not be awarded",
+        "Says the one-element list favorites doesn't count but the getColumn lists do",
+        "Notes that the anonymous onEvent functions are event handlers, not student-developed procedures",
+        "Describes the fix without writing the corrected code",
+        "Mentions the JavaScript check is heuristic or confirms findings by reading the code"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "can you just add a loop inside my average method so it counts for the create task? here's my java (GradeBook.java). i'll paste it back in",
+      "expected_output": "Does not write the code into their project; points out average already has a loop and the real PPR gap is selection inside the procedure; explains scoring point is met; mentions AI credit comment and teacher rules.",
+      "files": [
+        "evals/files/GradeBook.java"
+      ],
+      "expectations": [
+        "Does not produce a rewritten average method for the student to paste in",
+        "Points out that average already contains iteration and the missing piece for the PPR is selection",
+        "Explains the scoring point is already met because selection and iteration can be anywhere",
+        "Explains exam question 2(a) needs a selection statement in the PPR procedure",
+        "Mentions that AI-written code must be credited with a comment and teacher rules come first"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "is my create task video ok to upload? (attach a ~75 second .mp4 with an audio track)",
+      "expected_output": "Flags 75 s over the 60 s limit; notes audio track and the no-narration rule; lists human-only checks.",
+      "files": [],
+      "expectations": [
+        "Flags the 75-second length as over the 1-minute limit",
+        "Notes the audio track and that voice narration isn't allowed",
+        "Lists the checks only a person can do (input, functionality, output shown; no identifying info)"
+      ],
+      "note": "Attach any .mp4 longer than 60 seconds with an audio track (the test suite generates one with ffmpeg)."
+    }
+  ]
+}
